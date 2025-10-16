@@ -1,0 +1,9 @@
+class student :
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+s1 = student("charan",19)
+print(s1.name)
+print(getattr(s1,"agny", "no such attribute"))
+print(hasattr(s1,"age"))
