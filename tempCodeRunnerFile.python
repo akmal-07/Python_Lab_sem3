@@ -1,0 +1,40 @@
+# Improved script for test cases
+
+# Test case 1
+tc1_input = "1\n42\n"
+tc1_output = "0\n"
+
+# Test case 2
+n2 = 10000
+numbers = ["100"] * n2
+tc2_input = f"{n2}\n{' '.join(numbers)}\n"
+tc2_output = f"{n2*(n2-1)//2}\n"
+
+# Test case 3
+tc3_input = "8\n3 1 2 3 2 1 3 1\n"
+tc3_output = "7\n"
+
+# Test case 4
+tc4_input = "6\n4 5 6 7 8 9\n"
+tc4_output = "0\n"
+
+# Test case 5
+tc5_input = "7\n11 9 8 6 7 6 1\n"
+tc5_output = "1\n"
+
+def write_file(filename, content):
+    with open(filename, "w") as f:
+        f.write(content)
+
+write_file("input1.txt", tc1_input)
+write_file("output1.txt", tc1_output)
+write_file("input2.txt", tc2_input)
+write_file("output2.txt", tc2_output)
+write_file("input3.txt", tc3_input)
+write_file("output3.txt", tc3_output)
+write_file("input4.txt", tc4_input)
+write_file("output4.txt", tc4_output)
+write_file("input5.txt", tc5_input)
+write_file("output5.txt", tc5_output)
+
+print("Test case files generated successfully.")
